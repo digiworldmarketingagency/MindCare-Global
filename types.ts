@@ -1,3 +1,4 @@
+
 export interface Service {
   id: string;
   title: string;
@@ -25,4 +26,9 @@ export enum PageRoutes {
   SERVICES = '/services',
   PAYMENT = '/payment',
   COMPLIANCE = '/compliance',
+}
+
+export enum Language {
+  EN = 'en',
+  ES = 'es'
 }

@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Award, BookOpen, Clock } from 'lucide-react';
+import { Award, BookOpen, Clock, BadgeCheck, ExternalLink } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
@@ -8,14 +9,14 @@ export const About: React.FC = () => {
         
         {/* Profile Header */}
         <div className="md:flex">
-          <div className="md:w-1/3 bg-slate-100 relative min-h-[300px]">
+          <div className="md:w-1/3 bg-slate-100 relative min-h-[350px]">
              <img 
                src="https://picsum.photos/400/600?grayscale" 
-               alt="Dr. Sarah Jenkin" 
+               alt="Dr. Simra Saiyed" 
                className="w-full h-full object-cover absolute inset-0 mix-blend-multiply opacity-90"
              />
              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-slate-900/80 to-transparent">
-               <h2 className="text-2xl font-bold text-white">Dr. Sarah Jenkin</h2>
+               <h2 className="text-2xl font-bold text-white">Dr. Simra Saiyed</h2>
                <p className="text-teal-300 font-medium">MD, Psychiatry</p>
              </div>
           </div>
@@ -23,16 +24,12 @@ export const About: React.FC = () => {
           <div className="md:w-2/3 p-8 md:p-12">
             <h1 className="text-3xl font-bold text-slate-900 mb-6">Dedicated to Global Mental Wellness</h1>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              Dr. Jenkin is a board-certified psychiatrist with over 15 years of experience in treating anxiety disorders, depression, and adult ADHD. 
+              Dr. Saiyed is a board-certified psychiatrist with over 15 years of experience in treating anxiety disorders, depression, and adult ADHD. 
               Having practiced in the UK, USA, and Singapore, she brings a unique cross-cultural perspective to mental health, 
               understanding the nuances of modern, fast-paced global lifestyles.
             </p>
-            <p className="text-slate-600 mb-8 leading-relaxed">
-              Her approach combines evidence-based pharmacotherapy with supportive psychotherapy, believing that true healing 
-              comes from a holistic understanding of the patient's life, not just their symptoms.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               <div className="flex items-start gap-3">
                 <Award className="w-6 h-6 text-teal-500 mt-1" />
                 <div>
@@ -47,6 +44,20 @@ export const About: React.FC = () => {
                   <p className="text-sm text-slate-500">Anxiety, Depression, Trauma</p>
                 </div>
               </div>
+            </div>
+
+            {/* Medico-Legal Credential Section */}
+            <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <BadgeCheck className="text-teal-600 w-6 h-6" />
+                <div>
+                  <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Medical Licensing</p>
+                  <p className="text-sm font-semibold text-slate-800 italic">State Board Verified Practitioner</p>
+                </div>
+              </div>
+              <button className="text-[10px] font-black uppercase text-teal-600 flex items-center gap-1 hover:underline">
+                Verify Credentials <ExternalLink size={12} />
+              </button>
             </div>
           </div>
         </div>
